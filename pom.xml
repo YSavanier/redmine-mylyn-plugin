@@ -23,6 +23,7 @@
 		<module>net.sf.redmine_mylyn.feature</module>
 		
 		<module>net.sf.redmine_mylyn.p2repository</module>
+<!-- run this manually		<module>java11deps</module> -->
 	</modules>
 
 	<properties>
@@ -62,6 +63,11 @@
 			<id>aspectj</id>
 			<layout>p2</layout>
 			<url>${aspectj-site}</url>
+		</repository>
+		<repository>
+			<id>localj11</id> <!-- repository for missing java 11 stuff. -->
+			<layout>p2</layout>
+			<url>file://${project.basedir}/../java11deps/target/repository</url>
 		</repository>
 	</repositories>	
 	

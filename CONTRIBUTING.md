@@ -10,6 +10,7 @@
 - m2e connector for ADJT
 - m2e connector for Tycho
 
+- to run within eclipse, it seems necessary to add org.apache.felix.scr to the list of required plugins in the run specificaiton.
 
 ## How to setup Redmine server for tests
 
@@ -35,3 +36,16 @@ TODO:
 
 TODO Description based on [RoboVM Eclipse plugin - Performing a release](
 https://github.com/robovm/robovm-eclipse/wiki/Performing-a-release)
+
+## Supporting Java11+
+
+Java 11 removes JAXB - http://www.descher.at/descher-vu/2019/01/java-11-jaxb-and-osgi/ and https://github.com/reficio/p2-maven-plugin
+
+build a p2 repository with the necessary jars - suitable ones are not in orbit. It is possible to create this repository with 
+
+   	mvn p2:site
+
+in the java11deps directory, and then include this site into the target platform within eclipse for development, and when installing 
+into the final user eclipse, the site can be used as an extra update site.
+
+
