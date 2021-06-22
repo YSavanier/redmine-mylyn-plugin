@@ -1,20 +1,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <parent>
+ 
     <groupId>net.sf.redmine_mylyn</groupId>
-    <artifactId>net.sf.redmine_mylyn.parent</artifactId>
     <version>0.5.2-SNAPSHOT</version>
-  </parent>
+ 
   <artifactId>java11deps</artifactId>
   <packaging>pom</packaging>
   <name>java11deps</name>
+  <!-- 
+  run with 
+  
+  mvn p2:site
+  
+  feels like there should be another solution to this.... -->
   <description>a p2 site for the dependencies that are dropped from java 11</description>
     <build>
     <plugins>
       <plugin>
         <groupId>org.reficio</groupId>
         <artifactId>p2-maven-plugin</artifactId>
-        <version>1.3.0</version>
+        <version>1.7.0</version>
         <executions>
           <execution>
             <id>default-cli</id>

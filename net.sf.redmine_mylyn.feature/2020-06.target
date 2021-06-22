@@ -3,24 +3,32 @@
 <target name="2020-06" sequenceNumber="79">
 <locations>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.platform.ide" version="0.0.0"/>
 <repository location="http://download.eclipse.org/releases/2020-06"/>
-</location>
-<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.eclipse.mylyn_feature.feature.group" version="0.0.0"/>
-<unit id="org.eclipse.mylyn.context_feature.feature.group" version="0.0.0"/>
-<repository location="http://download.eclipse.org/mylyn/releases/latest/"/>
+	<unit id="org.eclipse.mylyn.context_feature.feature.group" version="3.25.1.v20200512-2113"/>
+	<unit id="org.eclipse.mylyn.java_feature.feature.group" version="3.25.1.v20200512-2113"/>
+	<unit id="org.eclipse.mylyn_feature.feature.group" version="3.25.1.v20200514-1748"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 <unit id="org.aspectj.runtime" version="0.0.0"/>
 <repository location="http://download.eclipse.org/tools/ajdt/410/dev/update"/>
 </location>
 <location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
-<unit id="org.json" version="0.0.0"/>
-<unit id="ch.qos.logback.classic" version="0.0.0"/>
-<unit id="org.slf4j.api" version="0.0.0"/>
+<unit id="org.json" version="1.0.0.v201011060100"/>
+<unit id="ch.qos.logback.classic" version="1.2.3.v20200428-2012"/>
+<unit id="org.slf4j.api" version="1.7.30.v20200204-2150"/>
 <repository location="http://download.eclipse.org/tools/orbit/downloads/drops/R20200529191137/repository/"/>
+	<unit id="org.apache.commons.httpclient" version="3.1.0.v201012070820"/>
 </location>
 	<location path="/Users/pharriso/eclipse/redmine-mylyn-plugin/java11deps/target/repository" type="Directory"/>
+	<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+		<repository location="http://download.eclipse.org/eclipse/updates/4.16"/>
+		<unit id="org.eclipse.jdt.feature.group" version="3.18.400.v20200604-0540"/>
+		<unit id="org.eclipse.platform.ide" version="4.16.0.I20200604-0540"/>
+		<unit id="org.eclipse.platform.sdk" version="4.16.0.I20200604-0540"/>
+		<unit id="org.eclipse.sdk.ide" version="4.16.0.I20200604-0540"/>
+		<unit id="org.eclipse.swt.tools.feature.feature.group" version="3.107.800.v20200522-1037"/>
+		<unit id="org.eclipse.swt.tools.feature.source.feature.group" version="3.107.800.v20200522-1037"/>
+	</location>
 </locations>
+	<targetJRE path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
 </target>

@@ -4,7 +4,7 @@ Bundle-Name: %Bundle-Name
 Bundle-SymbolicName: net.sf.redmine_mylyn.common;singleton:=true
 Bundle-Version: 0.5.2.qualifier
 Bundle-Vendor: %Bundle-Vendor
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-Activator: net.sf.redmine_mylyn.common.RedmineCommonPlugin
 Export-Package: net.sf.redmine_mylyn.common.logging;x-friends:="net.sf.redmine_mylyn.api,net.sf.redmine_mylyn.core,net.sf.redmine_mylyn.ui"
 Import-Package: org.eclipse.equinox.log;version="1.0.0"

@@ -27,9 +27,10 @@
 	</modules>
 
 	<properties>
-		<tycho-version>0.26.0</tycho-version>
-		<unleash-version>2.6.0</unleash-version>
-		<platform-version-name>neon</platform-version-name>
+		<tycho-version>2.3.0</tycho-version>
+<!-- 		<unleash-version>2.6.0</unleash-version> -->
+		<platform-version-name>2020-06</platform-version-name>
+		<platform-version>[4.16)</platform-version>		
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<eclipse-site>http://download.eclipse.org/releases/${platform-version-name}</eclipse-site>
 		<mylyn-site>http://download.eclipse.org/mylyn/releases/latest</mylyn-site>
@@ -91,27 +92,12 @@
 						<environment>
 							<os>linux</os>
 							<ws>gtk</ws>
-							<arch>x86</arch>
-						</environment>
-						<environment>
-							<os>linux</os>
-							<ws>gtk</ws>
 							<arch>x86_64</arch>
 						</environment>
 						<environment>
 							<os>win32</os>
 							<ws>win32</ws>
-							<arch>x86</arch>
-						</environment>
-						<environment>
-							<os>win32</os>
-							<ws>win32</ws>
 							<arch>x86_64</arch>
-						</environment>
-						<environment>
-							<os>macosx</os>
-							<ws>cocoa</ws>
-							<arch>x86</arch>
 						</environment>
 						<environment>
 							<os>macosx</os>
@@ -121,6 +107,19 @@
 					</environments>
 				</configuration>
 			</plugin>
+				<plugin>
+					<groupId>org.eclipse.tycho</groupId>
+					<artifactId>tycho-compiler-plugin</artifactId>
+					<configuration>
+						<encoding>UTF-8</encoding>
+						<verbose>true</verbose>
+						<source>11</source>
+						<target>11</target>
+						<logEnabled>true</logEnabled>
+						<logDirectory>${project.build.directory}/logfiles</logDirectory>
+						<log>plain</log> 
+					</configuration>
+				</plugin>
 		</plugins>		
 		
 		<pluginManagement>
@@ -141,9 +140,6 @@
 					<groupId>org.eclipse.tycho</groupId>
 					<artifactId>tycho-compiler-plugin</artifactId>
 					<version>${tycho-version}</version>
-					<configuration>
-						<encoding>UTF-8</encoding>
-					</configuration>
 				</plugin>
 				
 				<plugin>
@@ -158,86 +154,5 @@
 		</pluginManagement>
 	</build>
 		
-
-	<profiles>
-		<profile>
-			<id>platform-helios</id>
-			<activation>
-				<property>
-					<name>platform-version-name</name>
-					<value>helios</value>
-				</property>
-			</activation>
-			<properties>
-				<eclipse-site>http://download.eclipse.org/releases/helios</eclipse-site>
-				<platform-version>[3.6,3.7)</platform-version>
-			</properties>
-		</profile>
-		<profile>
-			<id>platform-indigo</id>
-			<activation>
-				<property>
-					<name>platform-version-name</name>
-					<value>indigo</value>
-				</property>
-			</activation>
-			<properties>
-				<eclipse-site>http://download.eclipse.org/releases/indigo</eclipse-site>
-				<platform-version>[3.7,3.8)</platform-version>
-			</properties>
-		</profile>
-		<profile>
-			<id>platform-neon</id>
-			<activation>
-				<property>
-					<name>platform-version-name</name>
-					<value>neon</value>
-				</property>
-			</activation>
-			<properties>
-				<eclipse-site>http://download.eclipse.org/releases/neon</eclipse-site>
-				<platform-version>[3.8,4.6)</platform-version>
-			</properties>
-		</profile>
-		<profile>
-			<id>platform-kepler</id>
-			<activation>
-				<property>
-					<name>platform-version-name</name>
-					<value>kepler</value>
-				</property>
-			</activation>
-			<properties>
-				<eclipse-site>http://download.eclipse.org/releases/kepler</eclipse-site>
-				<platform-version>[4.3,4.4)</platform-version>
-			</properties>
-		</profile>
-		<profile>
-			<id>platform-luna</id>
-			<activation>
-				<property>
-					<name>platform-version-name</name>
-					<value>luna</value>
-				</property>
-			</activation>
-			<properties>
-				<eclipse-site>http://download.eclipse.org/releases/luna</eclipse-site>
-				<platform-version>[4.4,4.5)</platform-version>
-			</properties>
-		</profile>
-		<profile>
-			<id>platform-mars</id>
-			<activation>
-				<property>
-					<name>platform-version-name</name>
-					<value>mars</value>
-				</property>
-			</activation>
-			<properties>
-				<eclipse-site>http://download.eclipse.org/releases/mars</eclipse-site>
-				<platform-version>[4.5,4.6)</platform-version>
-			</properties>
-		</profile>
-	</profiles>
 
 </project>

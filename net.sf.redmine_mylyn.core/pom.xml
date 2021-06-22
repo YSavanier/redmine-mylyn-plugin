@@ -14,14 +14,18 @@
 	<packaging>eclipse-plugin</packaging>
 	
 	<build>
+	
 		<plugins>
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>aspectj-maven-plugin</artifactId>
-				<version>1.7</version>
+			<plugin> <!-- temp use this as cannot get use official with java 11 yet -->
+  <groupId>com.nickwongdev</groupId>
+  <artifactId>aspectj-maven-plugin</artifactId>
+  <version>1.12.6</version>
+<!-- 				<groupId>org.codehaus.mojo</groupId> -->
+<!-- 				<artifactId>aspectj-maven-plugin</artifactId> -->
+<!-- 				<version>1.12-SNAPSHOT</version> -->
 				<configuration>
 					<verbose>true</verbose>
-					<complianceLevel>1.6</complianceLevel>
+					<complianceLevel>1.8</complianceLevel>
                 </configuration>
 				<executions>
 					<execution>
