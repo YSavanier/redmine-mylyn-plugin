@@ -9,8 +9,7 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.5.0",
  net.sf.redmine_mylyn.common;bundle-version="0.5.2",
  org.apache.httpcomponents.httpclient;bundle-version="4.5.10",
  org.json;bundle-version="1.0.0",
- jaxb-api;bundle-version="2.4.0",
- com.sun.xml.bind.jaxb-osgi;bundle-version="2.4.0"
+ jakarta.xml.bind;bundle-version="2.3.3"
 Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: 
  net.sf.redmine_mylyn.api;x-internal:=true,
