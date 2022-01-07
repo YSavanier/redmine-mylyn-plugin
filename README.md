@@ -49,7 +49,7 @@ Plugin Installation
 -------------------------
 
 1.  Download latest release from GitHub releases:
-[ZIP with built plugin as P2 repo](https://github.com/ljader/redmine-mylyn-plugin/releases/latest)
+[ZIP with built plugin as P2 repo](https://github.com/YSavanier/redmine-mylyn-plugin/releases/0.5.2)
 
 2.  Install it into Eclipse using instructions from [http://stackoverflow.com/a/16074606/498096](http://stackoverflow.com/a/16074606/498096) section "(1) auto install" - in summary:
 
